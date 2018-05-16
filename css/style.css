@@ -1,0 +1,2222 @@
+/* Body of the page */
+body {
+    margin: 0; /* Create space around elements */
+    background-color: whitesmoke; /* Background color */
+    overflow-x: hidden; /* Overflow is clipped, the rest of the content will be invisible */
+}
+
+/* Links */
+a {
+    text-decoration: none; /* Speciies the appearnace of decorative lines */
+    color: #000; /* color in hex value */
+}
+
+/* Top of navigation */
+#top_nav {
+    background-color: #ABABAB; 
+    height: 100px; /* Sets the height of an element */
+}
+
+/* Website logo */
+.supertech_logo {
+    height: 80px;
+    width: 140px; /* Stretching out element to the edges */
+    padding: 10px 10px 10px 155px; /* Generate space around element */
+	float: left; /* Specifies how an element should float */
+    margin-left: -7%;
+}
+
+/* Search engine */
+#search_engine {
+    padding: 10px;
+    width: 35%;
+    border: 1px solid #444; /* Specifies what kind of border to display */
+    font-family: "Gill Sans", sans-serif; /* Styling the font */
+    font-size: 15px; /* Size of the font */
+    border-top-left-radius: 5px; /* Defines the radius of the element's corners */
+    border-bottom-left-radius: 5px;
+    color: #444;
+    margin-top: 28px;
+    margin-left: 55px;
+}
+
+#search_item {
+    width: 3%;
+    height: 5.5%;
+    margin-left: -0.5%;
+    top: 3.5%;
+    border: 1px solid #000; /* Specifies what kind of border to display */
+    position: absolute; /* Positioning of the element */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #444;
+    cursor: pointer; /* What the mouse cursor will look like */
+}
+
+#search_item:hover {
+    background-color: #555;
+}
+
+.search_icon {
+    width: 60%;
+}
+
+.register_button {
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 12px 34px;
+    text-align: center; /* Aligning font */
+    text-decoration: none;
+    display: inline-block; /* Specifies the display behavior of an element */
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s; /* Control animation speed */
+    margin-left: 15%;
+}
+
+.register_button_hover:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); /* Add shadow to text and elements */
+}
+
+.add_to_basket {
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 12px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    margin-left: 3%;
+}
+
+.add_to_basket_hover:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+li {
+    color: #fff;
+}
+
+/* Navigation */
+#nav ul {
+    list-style: none; /* Specifies the position of the list-item markers */
+    background-color: #444;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#nav li {
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    line-height: 40px; /* Space used for lines */
+    text-align: left;   
+}
+
+#nav a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding-left: 15px;
+    border-bottom: 1px solid #888;
+    transition: .3s;
+}
+
+#nav a:hover {
+    color: #ff0000;
+}
+
+.nav_vert_line {
+    color: #fff;
+}
+
+/* Responsive */
+@media screen and (min-width: 650px) {
+    #nav li {
+        width: 130px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+        display: inline-block;
+    }
+
+    #nav a {
+        border-bottom: none;      
+    }
+
+    #nav > ul > li {
+        text-align: center;     
+    }
+
+    #nav > ul > li > a {
+        padding-left: 0;     
+    }
+
+    /* Sub Menus */
+    #nav li ul {
+        position: absolute;
+        display: none;
+        width: inherit;      
+    }
+
+    #nav li:hover ul {
+        display: block;
+    }
+
+    #nav li ul li {
+        display: block;
+    }
+}
+
+/* Header of the products */
+.product_header_home {
+    margin-top: 3%;
+    margin-left: 3%;
+    width: 50%;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #3D3D3E;
+}
+
+.product_header_home:hover /* Hover selector to select elements when you mouse over them */ {
+    text-decoration: underline;
+}
+
+/* Image of the products */
+.product_image_home {
+    margin-top: 5%;
+    margin-left: 12%;
+    width: 30%;
+    cursor: pointer;
+    animation-duration: 4s;
+    animation-name: product_home_slide_in; /* Specifies the name of the keyframe */
+}
+
+.product_image_home:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* Apply graphical effects to an element */
+}
+
+@keyframes product_home_slide_in {    
+    from {        
+        margin-left: 0%;                
+        width: 30%;            
+    }
+            
+    to {               
+        margin-left: 12%;                
+        width: 30%;            
+    }
+}
+
+/* Header and description of the products in the table */
+#vr_header_desc {
+    width: 50%;
+    height: 44.9%;
+    margin-left: 45%;
+    margin-top: -22%;
+    animation-duration: 4s;
+    animation-name: slide_right_text;
+}
+
+#cases_header_desc {
+    width: 50%;
+    height: 44.9%;
+    margin-left: 45%;
+    margin-top: -25%;
+    animation-duration: 4s;
+    animation-name: slide_right_text;
+}
+
+#headphones_header_desc {
+    width: 50%;
+    height: 44.9%;
+    margin-left: 45%;
+    margin-top: -25%;
+    animation-duration: 4s;
+    animation-name: slide_right_text;
+}
+
+#speaker_header_desc {
+    width: 50%;
+    height: 44.9%;
+    margin-left: 45%;
+    margin-top: -18%;
+    animation-duration: 4s;
+    animation-name: slide_right_text;
+}
+
+#lens_header_desc {
+    width: 50%;
+    height: 44.9%;
+    margin-left: 45%;
+    margin-top: -25%;
+    margin-bottom: 5%;
+    animation-duration: 4s;
+    animation-name: slide_right_text;
+}
+
+@keyframes slide_right_text {    
+    from {        
+        margin-left: 95%;                
+        width: 50%;            
+    }
+            
+    to {               
+        margin-left: 45%;                
+        width: 50%;            
+    }
+}
+
+/* Description of the products */
+.product_header_desc {
+    margin-top: 3%;
+    margin-left: 3%;
+    width: 95%;
+    font-size: 15px;
+    font-family: "Gill Sans", sans-serif;
+    line-height: 25px;
+    color: #444;
+}
+
+.product_desc_home {
+    margin-top: 3%;
+    margin-left: 3%;
+    width: 90%;
+    font-size: 15px;
+    font-family: "Gill Sans", sans-serif;
+    line-height: 25px;
+    color: #444;
+}
+
+.hor_line {
+    width: 50%;
+    margin-top: 5%;
+    border-color: #444; 
+}
+
+.recommendations {
+    margin-top: 3%;
+    margin-left: 25%;
+    text-align: center;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #3D3D3E;
+}
+
+.reco_hor_line {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    border-color: #444; 
+}
+
+#categories_right {
+    margin-top: -50%;
+}
+
+.categories_header {
+    padding-left: 20%;
+    text-align: center;
+    font-size: 40px;
+    color: #444;
+    font-family: Trebuchet MS;
+    margin-top: 7.5%;
+}
+
+.recommend_header {
+    text-align: center;
+    font-size: 30px;
+    color: #444;
+    font-family: Trebuchet MS;
+}
+
+#display_recomendation {
+    text-align: center;
+    margin-top: -3%;
+    font-size: 25px;
+    color: #444;
+    font-family: Trebuchet MS;
+}
+
+.filter_header {
+    padding-left: 5%;
+    padding-top: 2%;
+    font-size: 20px;
+    font-family: Trebuchet MS;
+    color: #3D3D3E;
+}
+
+.filter_checkbox_header {
+    padding-left: 5%;
+    padding-top: 1%;
+    font-size: 16px;
+    color: #04126D;
+    font-family: Trebuchet MS;
+}
+
+.contact_footer {
+    color: #222;
+    position: absolute;
+    padding-left: 8%;
+    padding-top: 3%;
+    font-size: 18px;
+    font-family: Trebuchet MS;
+}
+
+.company_footer {
+    color: #222;
+    position: absolute;
+    padding-left: 30%;
+    padding-top: 3%;
+    font-size: 18px;
+    font-family: Trebuchet MS;
+}
+
+.network_footer {
+    color: #222;
+    position: absolute;
+    padding-left: 47%;
+    padding-top: 3%;
+    font-size: 18px;
+    font-family: Trebuchet MS;
+}
+
+#content_information {
+    
+}
+
+.mission_title {
+    position: static;
+    text-align: center;
+    color: #444;
+    font-size: 50px;
+    font-family: Trebuchet MS;
+    margin-top: 3%;
+    animation-name: title_increase_font;
+    animation-duration: 10s;
+}
+
+@keyframes title_increase_font {
+    0% { 
+        font-size: 10px;
+    }
+    25% { 
+        font-size: 20px;
+    }
+    50% {
+        font-size: 30px;
+    }
+    75% { 
+        font-size: 40px;
+    }
+    100% {
+        font-size: 50px;
+    }
+}
+
+.about_title {
+    font-size: 40px;
+    text-align: center;
+    color: #444;
+    margin-top: 3%;
+    font-family: Trebuchet MS;
+}
+
+.mission_info {
+    font-size: 16px;
+    text-align: center;
+    color: #ff0000;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+}
+
+.about_info {
+    font-size: 14px;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #444;
+    font-family: "Gill Sans", sans-serif;
+    line-height: 180%;
+    animation-name: content_increase_font;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+.about_info_two {
+    font-size: 14px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    color: #444;
+    font-family: "Gill Sans", sans-serif;
+    line-height: 180%;
+    animation-name: content_increase_font;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+@keyframes content_increase_font {
+    0% { 
+        font-size: 6px;
+    }
+    25% { 
+        font-size: 8px;
+    }
+    50% {
+        font-size: 10px;
+    }
+    75% { 
+        font-size: 12px;
+    }
+    100% {
+        font-size: 14px;
+    }
+}
+
+#basket_header {
+    font-size: 40px;
+    text-align: center;
+    color: #444;
+    margin-top: 3%;
+    font-family: Trebuchet MS;
+}
+
+#product_grid {
+    float: left;
+    margin-left: 30%;
+    margin-top: -1%;
+}
+
+#cate_row1 {
+    background-color: #fff;
+    float: left;
+    margin-left: 3%;
+    width: 28%;
+    border: 1px solid #3D3D3E;
+    border-radius: 5px;
+    padding: 0.5%;
+    margin-top: 3%;
+    height: 410px;
+}
+
+#recommend_images {
+    background-color: #fff;
+    float: left;
+    margin-left: 8%;
+    width: 10%;
+    border-radius: 5px;
+    padding: 0.5%;
+    margin-top: 3%;
+    height: 120px;
+}
+
+.product_name {
+    text-align: center;
+    font-size: 14px;
+    font-family: Trebuchet MS;
+    color: #3D3D3E;
+}
+
+/* Filter check box */
+#filter_items {
+    border: 1px solid #3D3D3E;
+    width: 25%;
+    height: 140%;
+    margin-left: 3%;
+    margin-top: 3%;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.item_pages {
+    padding-left: 33%;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 16px;
+    color: #3D3D3E;
+    text-decoration: none;
+}
+
+.sort_by_dropbox {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 16px;
+    color: #3D3D3E;
+    text-decoration: none;
+    position: absolute;
+    padding-top: 2%;
+    padding-left: 30%;
+}
+
+.price-item {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: #ff0000;
+    margin-top: 0;
+}
+
+.categories_img {
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.recommend_img {
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.nav_arrow_down {
+    width: 15%;
+}
+
+.basket_icon {
+    width: 15%;
+    margin-right: 30%;
+}
+
+#position_bottom {
+    margin-bottom: 0%;
+}
+
+.hor_line_categories {
+    width: 90%;
+}
+
+.line_vr_page {
+    width: 90%;
+}
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    padding-top: 1px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+    margin-left: 5%;
+    color: #3D3D3E;
+    font-family: Trebuchet MS;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #04126D;
+}
+
+/* Create the checkmark/indicator */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.order_sorting {
+    appearance: button;
+    border-radius: 2px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), 
+        linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    color: #555;
+    font-size: inherit;
+    margin: 20px;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+    margin-left: 34.5%;
+    margin-top: 1.5%;
+    color: #04126D;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 14px;
+    z-index: 1;
+}
+
+.basket_item {
+    background-color: #04126D;
+    border: none;
+    color: #fff;
+    padding: 7px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: Trebuchet MS;
+    position: static;
+    margin-left: 5%;
+    margin-top: -1%;
+    width: 90%;
+    height: 10%;
+    border-radius: 5px;
+}
+
+.style_basket {
+    background-color: white; 
+    color: #04126D; 
+    border: 2px solid #04126D;
+}
+
+.style_basket:hover {
+    background-color: #04126D;
+    color: white;
+}
+
+#search_error {
+    color: #ff0000; /* Red */
+    font-family: "Trebuchet MS";
+    margin-left: 0%;
+}
+
+#register_top_border {
+    width: 40%;
+    background-color: #444;
+    margin-top: 3%;
+    margin-left: 30%;
+    padding: 1%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #444;
+}
+
+#register_top_border:hover {
+    background-color: #555;
+}
+
+.register_user_icon {
+    width: 7%;
+}
+
+.register_header {
+    font-family: Trebuchet MS;
+    font-size: 20px;
+    color: #fff;
+    margin-top: -5%;
+    margin-left: 10%;
+}
+
+.register_info {
+    font-family: Trebuchet MS;
+    font-size: 12px;
+    margin-top: 5%;
+    color: #fff;
+    margin-left: 10%;
+}
+
+.already_registered {
+    font-family: Trebuchet MS;
+    font-size: 12px;
+    color: #fff;
+    margin-top: -8%;
+    margin-left: 80%;
+    cursor: pointer;
+}
+
+.already_registered:hover {
+    text-decoration: underline;
+}
+
+#register_bottom_border {
+    width: 40%;
+    background-color: #fff;
+    margin-top: 0;
+    margin-left: 30%;
+    padding: 1%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #444;
+}
+
+.register_label {
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 16px;
+    color: #444;
+}
+
+#id {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#name {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#username {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#deliveryaddress {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#postcode {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#emailaddress {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#password {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#register_button {
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #fff;
+    background-color: #444;
+    margin-left: 2%;
+    margin-top: 4%;
+    width: 95%;
+    height: 6%;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 2%;
+}
+
+#register_button:hover {
+    background-color: #ABABAB;
+    color: #444;
+}
+
+#server_response {
+    color: #ff0000; /* Red */
+    font-family: "Trebuchet MS";
+    margin-left: 2%;
+}
+
+#sign_in_top_border {
+    width: 40%;
+    background-color: #444;
+    margin-top: 3%;
+    margin-left: 30%;
+    padding: 1%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #444;
+}
+
+#sign_in_top_border:hover {
+    background-color: #555;
+}
+
+.sign_in_user_icon {
+    width: 7%;
+}
+
+.sign_in_header {
+    font-family: Trebuchet MS;
+    font-size: 20px;
+    color: #fff;
+    margin-top: -5%;
+    margin-left: 10%;
+}
+
+.sign_in_info {
+    font-family: Trebuchet MS;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+#sign_in_bottom_border {
+    width: 40%;
+    background-color: #fff;
+    margin-top: 0;
+    margin-left: 30%;
+    padding: 1%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #444;
+}
+
+.sign_in_label {
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 16px;
+    color: #444;
+}
+
+.log_in_button {
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #fff;
+    background-color: #444;
+    margin-left: 2%;
+    margin-top: 4%;
+    width: 95%;
+    height: 6%;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 2%;
+}
+
+.log_in_button:hover {
+    background-color: #ABABAB;
+    color: #444;
+}
+
+#log_out_button {
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    background-color: #fff;
+    border: 1px solid #444;
+    margin-top: 2%;
+    width: 14%;
+    height: 9%;
+    margin-left: 34%;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 2%;
+}
+
+#log_out_button:hover {
+    color: #ff0000;
+}
+
+#past_order_button {
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    background-color: #fff;
+    border: 1px solid #444;
+    margin-top: 2%;
+    width: 14%;
+    height: 9%;
+    margin-left: 54%;
+    margin-top: -6.4%;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 2%;
+}
+
+#past_order_button:hover {
+    color: #ff0000;
+}
+
+#search_customer {
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    background-color: #fff;
+    border-radius: 2px;
+    width: 14%;
+    height: 9%;
+    border: 1px solid #444;
+    margin-left: 34%;
+    cursor: pointer;
+}
+
+#search_customer:hover {
+    color: #ff0000;
+}
+
+.search_customer_text {
+    text-align: center;
+    margin-top: 11%;
+}
+
+#delete_customer {
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    background-color: #fff;
+    border-radius: 2px;
+    width: 14%;
+    height: 9%;
+    border: 1px solid #444;
+    margin-left: 54%;
+    margin-top: -4.5%;
+    cursor: pointer;
+}
+
+#delete_customer:hover {
+    color: #ff0000;
+}
+
+.delete_customer_text {
+    text-align: center;
+    margin-top: 11%;
+}
+
+#error_messages {
+    color: #ff0000; /* Red */
+    font-family: "Trebuchet MS";
+    margin-left: 2%;
+}
+
+#view_past_table {
+    margin-bottom: 2%;
+}
+
+#edit_top_border {
+    width: 40%;
+    background-color: #444;
+    margin-top: 3%;
+    margin-left: 30%;
+    padding: 1%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #444;
+}
+
+#edit_top_border:hover {
+    background-color: #555;
+}
+
+.edit_user_icon {
+    width: 7%;
+}
+
+.edit_header {
+    font-family: Trebuchet MS;
+    font-size: 20px;
+    color: #fff;
+    margin-top: -5%;
+    margin-left: 10%;
+}
+
+.search_info {
+    font-family: Trebuchet MS;
+    font-size: 12px;
+    color: #fff;
+    margin-top: -1%;
+    margin-left: 10%;
+}
+
+#edit_bottom_border {
+    width: 40%;
+    background-color: #fff;
+    margin-top: 0;
+    margin-left: 30%;
+    padding: 1%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #444;
+}
+
+.edit_label {
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 16px;
+    color: #444;
+}
+
+#search_detail {
+    margin-top: 1%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#search_detail:hover {
+    font-size: 16px;
+}
+
+#customer_data_button {
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #fff;
+    background-color: #444;
+    margin-left: 2%;
+    margin-top: 3%;
+    width: 95%;
+    height: 6%;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#customer_data_button:hover {
+    background-color: #ABABAB;
+    color: #444;
+}
+
+.delete_customer {
+    background-color: transparent; 
+    border-color: transparent;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 25%;
+    height: 8%;
+    border: 1px solid #444;
+    margin-left: 38%;
+    margin-top: 4%;
+    cursor: pointer;
+}
+
+.delete_customer:hover {
+    color: #ff0000;
+}
+
+.update_label {
+    font-family: Trebuchet MS;
+    font-size: 16px;
+    color: #ff0000;
+}
+
+#delete_detail {
+    margin-top: 1%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#delete_detail:hover {
+    font-size: 16px;
+}
+
+.news_header {
+    font-size: 40px;
+    text-align: left;
+    margin-left: 8%;
+    color: #444;
+    margin-top: 3%;
+    font-family: Trebuchet MS;
+    animation-name: header_fade_in_out;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes header_fade_in_out {
+    0% { 
+        opacity: 1;
+    }    
+    25% { 
+        opacity: 0;
+    }    
+    50% {
+        opacity: 1;
+    }    
+    75% { 
+        opacity: 0;
+    }    
+    100% {
+        opacity: 1;
+    }
+}
+
+#contact_info {
+    margin-top: 3%;
+    margin-left: 30%;
+    height: 130%;
+    width: 45%;
+    background-color: #444;
+    border-radius: 2px;
+    animation-name: contact_us_anime;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+@keyframes contact_us_anime {
+    0% { 
+        opacity: 0;
+    }    
+    15% { 
+        opacity: 1;
+    }    
+    30% {
+        background-color: #444;
+    }    
+    45% { 
+        background-color: #ABABAB;
+    }   
+    60% {
+        background-color: #444;
+    }
+    75% {
+        background-color: #ABABAB;
+    }
+    100% {
+        background-color: #444;
+    }
+}
+
+.contact_info_header {
+    margin-top: -1%;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    font-family: Trebuchet MS;
+}
+
+.contact_message {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 15px;
+    line-height: 180%;
+    color: #fff;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.contact_label {
+    margin-left: 15%;
+    margin-top: 5%;
+    font-family: Trebuchet MS;
+    font-size: 16px;
+    color: #fff;
+}
+
+.contact_textbox {
+    margin-top: 1%;
+    margin-left: 15%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 70%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 1px;
+}
+
+.message_textbox {
+    margin-top: 1%;
+    margin-left: 15%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    padding: 2%;
+    width: 70%;
+    height: 30%;
+    border-radius: 1px;
+}
+
+.send_button {
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #fff;
+    background-color: #444;
+    margin-left: 15%;
+    margin-top: 4%;
+    width: 70%;
+    height: 5%;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-bottom: 2%;
+}
+
+.send_button:hover {
+    background-color: #ABABAB;
+    color: #444;
+}
+
+.contact_line {
+    width: 90%;
+}
+
+.animation_header {  
+    font-size: 40px;
+    color: #444;
+    font-family: Trebuchet MS; 
+    margin-top: 12%;
+    margin-left: 42%;        
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+          
+@keyframes slidein {            
+    from {                
+        margin-left: 100%;                
+        width: 300%;            
+    }
+            
+    to {               
+        margin-left: 42%;                
+        width: 100%;            
+    }        
+}
+
+.animation_image { 
+    margin-top: -25%;
+    margin-left: 12%;
+    width: 30%;
+    animation-duration: 2s;
+    animation-name: slideout;
+}
+
+@keyframes slideout {            
+    from {                
+        margin-left: 100%;                
+        width: 30%;            
+    }
+            
+    to {               
+        margin-left: 12%;                
+        width: 30%;            
+    }        
+}
+
+.twitter_timeline {
+    margin-left: 6%;
+}
+
+#basket_list {
+    border-collapse: collapse;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 3%;
+}
+
+#basket_list td, #basket_list th {
+    border: 1px solid #444;
+    padding: 8px;
+}
+
+#basket_list th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #444;
+    color: #fff;
+    font-family: Trebuchet MS; 
+    font-size: 16px;
+}
+
+#basket_list td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    color: #000;
+    font-family: "Gill Sans", sans-serif; 
+    font-size: 14px;
+}
+
+.subtotal_text {
+    color: #444;
+    font-family: "Gill Sans", sans-serif; 
+    font-size: 15px;
+    margin-left: 70%;
+}
+
+.total_price {
+    color: #ff0000;
+    font-family: "Gill Sans", sans-serif; 
+    font-size: 18px;
+    margin-left: 75%;
+    margin-top: -2.3%;
+}
+
+.checkout_button {
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #fff;
+    background-color: #444;
+    margin-left: 70%;
+    width: 10%;
+    height: 6%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: -3%;
+}
+
+.checkout_button:hover {
+    background-color: #ABABAB;
+    color: #444;
+}
+
+.empty_basket {
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #fff;
+    background-color: #444;
+    margin-left: 20%;
+    margin-top: -2%;
+    width: 10%;
+    height: 6%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 2%;
+}
+
+.empty_basket:hover {
+    background-color: #ABABAB;
+    color: #444;
+}
+
+.basket_img {
+    width: 20%;
+}
+
+.basket_items {
+    margin-left: 65%;
+    margin-top: 0%;
+    width: 90%;
+    font-size: 15px;
+    font-family: "Gill Sans", sans-serif;
+    line-height: 25px;
+    color: #444;
+}
+
+.image_column {
+    width: 50%;
+    height: 10%;
+}
+
+.confirm_button {
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #fff;
+    background-color: #444;
+    margin-left: 70%;
+    width: 10%;
+    height: 6%;
+    border-radius: 5px;
+    margin-top: 2%;
+    cursor: pointer;
+    margin-bottom: 2%;
+}
+
+.confirm_button:hover {
+    background-color: #ABABAB;
+    color: #444;
+}
+
+#confirmation_email {
+    margin-top: -4%;
+    margin-left: 20%;
+    margin-bottom: 2%;
+    color: #ff0000;
+    font-family: "Trebuchet MS";
+}
+
+/* Back to top button */
+#back_to_top {
+    width: 100%;
+    height: 50px;
+    background-color: #444;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+    margin-top: 2%;
+    font-size: 15px;
+    font-family: Trebuchet MS;
+    color: #fff;
+}
+
+#back_to_top:hover {
+    color: #ff0000;
+}
+
+#supertech_footer {
+    background-color: #ABABAB;
+    height: 35%;
+    border: 1px solid #444;
+}
+
+.contact_tour {
+    color: #444;
+    position: absolute;
+    padding-left: 8%;
+    padding-top: 6%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.contact_help {
+    color: #444;
+    position: absolute;
+    padding-left: 8%;
+    padding-top: 7.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.contact_chat {
+    color: #444;
+    position: absolute;
+    padding-left: 8%;
+    padding-top: 9%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.contact_contact {
+    color: #444;
+    position: absolute;
+    padding-left: 8%;
+    padding-top: 10.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.contact_feedback {
+    color: #444;
+    position: absolute;
+    padding-left: 8%;
+    padding-top: 12%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.contact_mobile {
+    color: #444;
+    position: absolute;
+    padding-left: 8%;
+    padding-top: 13.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.company_super_tech {
+    color: #444;
+    position: absolute;
+    padding-left: 30%;
+    padding-top: 6%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.company_super_tech_business {
+    color: #444;
+    position: absolute;
+    padding-left: 30%;
+    padding-top: 7.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.company_jobs {
+    color: #444;
+    position: absolute;
+    padding-left: 30%;
+    padding-top: 9%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.company_about {
+    color: #444;
+    position: absolute;
+    padding-left: 30%;
+    padding-top: 10.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.company_privacy_policy {
+    color: #444;
+    position: absolute;
+    padding-left: 30%;
+    padding-top: 12%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.company_legal {
+    color: #444;
+    position: absolute;
+    padding-left: 30%;
+    padding-top: 13.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.network_technology{
+    color: #444;
+    position: absolute;
+    padding-left: 47%;
+    padding-top: 6%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.network_phone {
+    color: #444;
+    position: absolute;
+    padding-left: 47%;
+    padding-top: 7.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.network_service {
+    color: #444;
+    position: absolute;
+    padding-left: 47%;
+    padding-top: 9%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.network_sim {
+    color: #444;
+    position: absolute;
+    padding-left: 47%;
+    padding-top: 10.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.network_communication {
+    color: #444;
+    position: absolute;
+    padding-left: 47%;
+    padding-top: 12%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.social_media_blog {
+    color: #444;
+    position: absolute;
+    padding-left: 78%;
+    padding-top: 3.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.hifun {
+    color: #444;
+    position: absolute;
+    padding-left: 80.3%;
+    padding-top: 3.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.social_media_facebook {
+    color: #444;
+    position: absolute;
+    padding-left: 81%;
+    padding-top: 3.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.hifun_two {
+    color: #444;
+    position: absolute;
+    padding-left: 85.4%;
+    padding-top: 3.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.social_media_twitter {
+    color: #444;
+    position: absolute;
+    padding-left: 86%;
+    padding-top: 3.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.hifun_three {
+    color: #444;
+    position: absolute;
+    padding-left: 89%;
+    padding-top: 3.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.social_media_linkedin {
+    color: #444;
+    position: absolute;
+    padding-left: 89.7%;
+    padding-top: 3.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.information_footer {
+    color: #444;
+    position: absolute;
+    padding-left: 75%;
+    padding-top: 11.5%;
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+#cms_navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: #eee;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    font-family: Trebuchet MS;
+    font-size: 16px;
+}
+
+.cms_page a {
+    display: block;
+    color: #444;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.cms_page a.active {
+    background-color: #444;
+    color: white;
+}
+
+.cms_page a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+#content_page {
+    margin-left: 20%;
+    padding: 1px 16px;
+    height: 130%;
+    background-color: #fff;
+}
+
+#add_data_page {
+    margin-left: 20%;
+    padding: 1px 16px;
+}
+
+.cms_title {
+    text-align: center;
+    color: #444;
+    text-decoration: underline;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 35px;
+}
+
+.input_title {
+    text-align: center;
+    color: #444;
+    text-decoration: underline;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 35px;
+    margin-top: -2%;
+}
+
+.product_title {
+    text-align: center;
+    color: #444;
+    text-decoration: underline;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 20px;
+    margin-top: -2%;
+}
+
+.add_icon {
+    margin-top: -13%;
+    width: 30%;
+}
+
+.add_product_text {
+    position: absolute;
+    margin-top: 6%;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    margin-left: -11%;
+    color: #fff;
+}
+
+.list_icon {
+    margin-top: -10%;
+    width: 25%;
+}
+
+.list_product_text {
+    position: absolute;
+    margin-top: 6%;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    margin-left: -10%;
+    color: #fff;
+}
+
+.edit_icon {
+    margin-top: -10%;
+    width: 24%;
+}
+
+.edit_product_text {
+    position: absolute;
+    margin-top: 6%;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    margin-left: -10%;
+    color: #fff;
+}
+
+.delete_icon {
+    margin-top: -10%;
+    width: 30%;
+}
+
+.delete_product_text {
+    position: absolute;
+    margin-top: 7%;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    margin-left: -12%;
+    color: #fff;
+}
+
+#input_area {
+    padding: 30px;
+    width: 40%;
+    border: 1px solid #444;
+    margin: 25%;
+    margin-top: 2%;
+}
+
+#list_area {
+    padding: 30px;
+    margin-top: -1%;
+    margin-left: 3%;
+    width: 40%;
+}
+
+.product_label {
+    margin-top: 0;
+    margin-left: 2%;
+    font-family: Trebuchet MS; 
+    font-size: 18px;
+    color: #444;
+}
+
+.save_button {
+    margin-top: 5%;
+    width: 95%;
+    border-radius: 2px;
+    margin-left: 2%;
+    height: 6%;
+    color: #fff;
+    font-family: Trebuchet MS; 
+    font-size: 20px;
+    background-color: #444;
+    cursor: pointer;
+}
+
+.save_button:hover {
+    opacity: 0.5;
+}
+
+.delete_button {
+    margin-top: 5%;
+    margin-left: 1%;
+    width: 95%;
+    height: 5%;
+    color: #fff;
+    font-family: Trebuchet MS; 
+    font-size: 20px;
+    background-color: #444;
+    cursor: pointer;
+}
+
+.delete_button:hover {
+    opacity: 0.5;
+}
+
+#list_page {
+    margin-left: 20%;
+    padding: 1px 10px;
+    height: 3500px;
+    width: 160%;
+    background-color: #fff;
+}
+
+/* Table */ 
+
+#product_list {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#product_list td, #product-list th {
+    border: 1px solid #fff;
+    padding: 8px;
+}
+
+#product_list tr:nth-child(even) {
+    background-color: #fff;
+}
+
+#product_list tr:hover {
+    background-color: #fff;
+}
+
+#product_list th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #444;
+    color: white;
+    font-family: Trebuchet MS; 
+    font-size: 16px;
+    border: 1px solid #444;
+}
+
+#product_list td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    color: #000;
+    font-family: "Gill Sans", sans-serif; 
+    font-size: 12px;
+    border: 1px solid #444;
+}
+
+#staff_register_top {
+    width: 45%;
+    background-color: #444;
+    margin-top: 3%;
+    margin-left: 26%;
+    padding: 1%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #444;
+}
+
+#staff_register_top:hover {
+    background-color: #555;
+}
+
+#staff_register_bottom {
+    width: 45%;
+    background-color: #fff;
+    margin-left: 26%;
+    margin-bottom: 5%;
+    padding: 1%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #444;
+}
+
+#staff_login_top {
+    width: 45%;
+    background-color: #444;
+    margin-top: 3%;
+    margin-left: 27%;
+    padding: 1%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #444;
+}
+
+#staff_login_top:hover {
+    background-color: #555;
+}
+
+#staff_login_bottom {
+    width: 45%;
+    background-color: #fff;
+    margin-left: 27%;
+    padding: 1%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #444;
+}
+
+.cms_img {
+    width: 70%;
+}
+
+.img_column {
+    width: 20%;
+}
+
+.add_product_button {
+    margin-top: 2%;
+    height: 5%;
+    width: 20%;
+    background-color: #444;
+    color: #fff;
+}
+
+.add_product_button:hover {
+    background-color: #ABABAB;
+    color: #444;
+    cursor: pointer;
+}
+
+.error {
+    color: #ff0000; /* Red */
+    font-family: "Trebuchet MS";
+}
+
+#firstname {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#lastname {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#mobilenumber {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#productid {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#image {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#productname {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#accessories {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#brand {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#color {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#price {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    color: #444;
+    width: 95%;
+    height: 5%;
+    padding: 2%;
+    border-radius: 2px;
+}
+
+#add_product {
+    margin-left: 2%;
+    color: #ff0000; /* Red */
+    font-family: "Trebuchet MS";
+} 
+
+#product_response {
+    margin-left: 2%;
+    color: #ff0000; /* Red */
+    font-family: "Trebuchet MS";
+}
+
+#edit_product_message {
+    margin-left: 2%;
+    color: #ff0000; /* Red */
+    font-family: "Trebuchet MS";
+}
+
+.cms_already_registered {
+    font-family: Trebuchet MS;
+    font-size: 12px;
+    color: #fff;
+    margin-top: -6%;
+    margin-left: 75%;
+    cursor: pointer;
+}
+
+.cms_already_registered:hover {
+    text-decoration: underline;
+}
