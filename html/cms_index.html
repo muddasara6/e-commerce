@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html lang="en">    
+    <head>       
+        <title>CMS | Home</title>                     
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/x-icon" href="../img/icon/tab_logo.ico"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">        
+        <script type="text/javascript" src="../js/main.js"></script>
+    </head>
+    
+    <body>          
+        <ul id="cms_navigation">
+            <li class="cms_page"><a class="active" href="cms_index.html">Home</a></li>
+            <li class="cms_page"><a href="cms_add_product.html">Add Product</a></li>
+            <li class="cms_page"><a href="cms_list_product.html">List Product</a></li>
+            <li class="cms_page"><a href="cms_edit_product.html">Edit Product</a></li>
+            <li class="cms_page"><a href="cms_delete_product.html">Delete Product</a></li>
+            <li class="cms_page"><a href="cms_view_order.html">View Customer Order</a></li>
+        </ul>
+        
+        <!-- Only staff members can log in -->
+        <div id="content_page">
+            <h1 class="cms_title">Staff Login</h1>
+            <!-- Staff login -->
+            <div id="staff_login_top">
+                <img class="sign_in_user_icon" src="../img/icon/sign_in_user_icon.png" alt="User">
+                <h1 class="sign_in_header">Staff Log In</h1>
+            </div>         
+    
+            <div id="staff_login_bottom">
+                <br>
+                <!-- Staff enter their username -->
+                <label class="sign_in_label">Username<span class="error"> *</span><br>
+                    <input id="username" type="text" name="username" placeholder="Username...">
+                </label>
+                <br>
+                <br>
+                <!-- Staff enter their password -->
+                <label class="sign_in_label">Password<span class="error"> *</span><br>
+                    <input id="password" type="password" name="password" placeholder="Password...">
+                </label>
+                <br>
+                <input class="log_in_button" onclick="cmsLogin()" type="submit" name="log-in" value="LOG IN">
+                <!-- Validation -->
+                <p id="error_messages"></p>
+            </div>
+        </div>
+    </body>
+</html>

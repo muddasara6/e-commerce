@@ -1,0 +1,167 @@
+<!DOCTYPE>
+<html lang="en">    
+    <head>
+        <!-- Website title -->
+        <title>Super Tech | Home</title>                     
+        <!-- The viewport makes the website look good on all devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <!-- The charset attribute specifies the character encoding for the HTML document -->
+        <meta charset="utf-8">
+        <!-- Icon displayed on the tab -->
+        <link rel="shortcut icon" type="image/x-icon" href="../img/icon/tab_logo.ico"/>
+        <!-- External Style Sheet -->
+        <link rel="stylesheet" type="text/css" href="../css/style.css">        
+        <!-- External JavaScript -->
+        <script type="text/javascript" src="../js/main.js"></script>
+    </head>
+    
+    <body>                
+        <!-- This is where the search bar will be -->
+        <div id="top_nav"> 
+            <!-- User can click on the logo to go home -->
+            <a href="index.html">
+                <img class="supertech_logo" src="../img/icon/supertech_logo.png">
+            </a>
+            <!-- The search bar for users to search for products on the categories page -->
+            <input id="search_engine" type="text" name="search" placeholder="Search on the Categories page..." disabled>
+            <button id="search_item" onclick="loadContent()">
+                <img class="search_icon" src="../img/icon/search_icon.png">
+            </button>
+            <!-- User clicks here to register -->
+            <a href="register.html">
+                <button class="register_button register_button_hover">Register</button>
+            </a>
+            <!-- Users can look at their basket -->
+            <a href="basket.html">
+                <button class="add_to_basket add_to_basket_hover">Basket</button>
+            </a>
+        </div>        
+        
+        <!-- Navigate to other pages -->
+        <div id="nav">   
+            <ul>          
+                <li>
+                    <!-- Home page -->
+                    <a href="index.html">Home</a>
+                </li>
+                <li>|</li>            
+                <li>
+                    <!-- Categories page (displays the products users can buy) -->
+                    <a href="categories.html">Categories</a>
+                </li>
+                <li>|</li>              
+                <li>
+                    <!-- Contact information page -->
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>|</li>             
+                <li>
+                    <!-- About page -->
+                    <a href="about.html">About</a>
+                </li>
+            </ul>         
+        </div>
+        
+        <!-- Opens the categories page when a user clicks on the image -->
+        <a href="categories.html">
+            <img class="product_image_home" src="../img/vr_headset/vr_headset.png" alt="VR Headset"/>
+        </a>      
+        <!-- Desceription of the product -->
+        <div id="vr_header_desc">
+            <!-- Header -->
+            <a href="categories.html">
+                <h1 class="product_header_home">VR-Headset</h1>
+            </a>            
+            <!-- Description -->
+            <p class="product_desc_home">A virtual reality headset is a head-mounted device that provides virtual reality for the wearer. VR headsets are widely used with computer games but they are also used in other applications, including simulators and trainers. A virtual reality headset is a heads-up display (HUD) that allows users to interact with simulated environments and experience a first-person view (FPV). VR headsets replace the user’s natural environment with virtual reality content, such as a movie, a game or a prerecorded 360-degree VR environment that allows the user to turn and look around, just as in the physical world.</p>
+        </div>
+        
+        <!-- Horizontal line below each product -->
+        <hr class="hor_line"/>
+        
+        <a href="categories.html">
+            <img class="product_image_home" src="../img/cases/smartphone_case.png" alt="Smartphone Cases"/>
+        </a>
+        
+        <div id="cases_header_desc">
+            <a href="categories.html">
+                <h1 class="product_header_home">Smartphone Cases</h1>
+            </a>            
+            <p class="product_desc_home">You can buy one of our protective print marble phone case composed of a gorgeous sunset purple tone with delicate stone cracks. Completed in a gloss finish and paired with a front color matching bumper, an exclusive signature by Velvet Caviar. It comes with a full 360 degree bumper protection with access to all ports as well as a front raised lip to protect your phone screen.</p>
+        </div>
+        
+        <hr class="hor_line"/>
+        
+        <a href="categories.html">
+            <img class="product_image_home" src="../img/headphones/phone_headphones.png" alt="Headphones"/>
+        </a>
+        
+        <div id="headphones_header_desc">
+            <a href="categories.html">
+                <h1 class="product_header_home">Headphones</h1>
+            </a>            
+            <p class="product_desc_home">Like speakers, headphones contain transducers that convert an audio signal into sound waves. Headphones that connect to an analog audio port (such as a 3.5 mm audio jack) process analog audio. Headphones that connect to a digital port, such as a USB or Lightning port process digital audio. Digital headphones must also include a digital-to-analog converter, or DAC, in order to produce the analog output.</p>
+        </div>
+        
+        <hr class="hor_line"/>
+        
+        <a href="categories.html">
+            <img class="product_image_home" src="../img/portable_speaker/portable_speaker.png" alt="Portable speaker"/>
+        </a>
+        
+        <div id="speaker_header_desc">
+            <a href="categories.html">
+                <h1 class="product_header_home">Portable speaker</h1>
+            </a>
+            <p class="product_desc_home">Buy The Bose SoundLink Revolve which is a small, portable Bluetooth speaker that has an impressive 360-degree sound and a powerful driver that'll fill a medium-sized room. Its sound quality is impressive, with its single full-range driver delivering a warm sound. Wireless speakers are loudspeakers which receive audio signals using radio frequency (RF) waves rather than over audio cables. The two most popular RF frequencies that support audio transmission to wireless loudspeakers include a variation of WiFi IEEE 802.11 while others depend on Bluetooth to transmit audio data to the receiving speaker.</p>
+        </div>
+        
+        <hr class="hor_line"/>
+        
+        <a href="categories.html">
+            <img class="product_image_home" src="../img/zoom_lens/zoom_lens.png" alt="Zoom lens"/>
+        </a>
+        
+        <div id="lens_header_desc">
+            <a href="categories.html">
+                <h1 class="product_header_home">Zoom lens</h1>
+            </a>
+            <p class="product_desc_home">A zoom lens is a type of camera lens that is offers the photographer a useful range of different focal lengths in a single lens. This is in comparison to a prime lens, which only offers a single focal length. A zoom lens allows for quick and easy re-framing of a scene while staying in the same physical position. Sigma offers a line of over 20 zoom lenses for DSLR photographers, ranging from wide angle zoom lenses, supertelephoto zoom lenses, and high-zoom ratio all-in-one lenses for both full-frame (DG) and APS-C (DC) digital cameras. Zoom lenses always feature two focal lengths in the name which indicate the shortest and longest focal lengths in relation to the 35mm/full-frame sensor. To determine the overall zoom ratio of the lens, simply divide the longest focal length by the shortest.</p>
+        </div>
+        
+        <!-- To take users back to the top of the page -->
+        <button id="back_to_top" onclick="backToTop()" title="Back to top">Back to top</button>
+        
+        <!-- Footer section displaying extra information -->
+        <div id="supertech_footer">      
+            <span class="contact_footer">Contact Information</span>
+            <span class="contact_tour">Tour</span> 
+            <span class="contact_help">Help</span>      
+            <span class="contact_chat">Chat</span>      
+            <span class="contact_contact">Contact</span>      
+            <span class="contact_feedback">Feedback</span>       
+            <span class="contact_mobile">Mobile</span>      
+            <span class="company_footer">Company</span>       
+            <span class="company_super_tech">Super Tech</span>
+            <span class="company_super_tech_business">Super Tech Business</span>   
+            <span class="company_jobs">Job</span>       
+            <span class="company_about">About</span>      
+            <span class="company_privacy_policy">Privacy Policy</span>      
+            <span class="company_legal">Legal</span>     
+            <span class="network_footer">Super Tech Network</span>
+            <span class="network_technology">Technology</span>
+            <span class="network_phone">Phone</span>      
+            <span class="network_service">Service</span>     
+            <span class="network_sim">SIM</span>       
+            <span class="network_communication">Communication</span>
+            <span class="social_media_blog">Blog</span>       
+            <span class="hifun">-</span>     
+            <span class="social_media_facebook">Facebook</span>
+            <span class="hifun_two">-</span>      
+            <span class="social_media_twitter">Twitter</span>
+            <span class="hifun_three">-</span>      
+            <span class="social_media_linkedin">LinkedIn</span>
+            <span class="information_footer">site design / logo © 2018 SuperTech Inc; <br> user contributions licensed under cc by-sa 3.0 <br> with attribution required. rev 2018.1.23.28521</span>    
+        </div>
+    </body> 
+</html>

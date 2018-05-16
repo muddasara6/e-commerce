@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">  
+    <head>       
+        <title>Super Tech | Categories</title>                     
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/x-icon" href="../img/icon/tab_logo.ico"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>   
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script>                    
+            // Create recommender object - it loads its state from local storage
+            var recommender = new Recommender();
+            // Display recommendation
+            window.onload = showRecommendation;
+
+            // Display the recommendation in the document
+            function showRecommendation() {
+                // Display the top search on the webpage
+                document.getElementById("display_recomendation").innerHTML = recommender.getTopKeyword();
+            }
+        </script>
+    </head>
+    
+    <!-- Display the top recommendation when the page loads -->
+    <body onload="productDisplay()">                
+        <div id="top_nav"> 
+            <a href="index.html">
+                <img class="supertech_logo" src="../img/icon/supertech_logo.png">
+            </a>
+            <input id="search_engine" type="text" name="search" placeholder="Search for accessories...">
+            <button id="search_item" onclick="loadContent()">
+                <img class="search_icon" src="../img/icon/search_icon.png">
+            </button>
+            <a href="register.html">
+                <button class="register_button register_button_hover">Register</button>
+            </a>
+            <a href="basket.html">
+                <button class="add_to_basket add_to_basket_hover">Basket</button>
+            </a>
+        </div>        
+        
+        <div id="nav">   
+            <ul>          
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>|</li>            
+                <li>
+                    <a href="categories.html">Categories</a>
+                </li>
+                <li>|</li>              
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>|</li>             
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+            </ul>         
+        </div>
+        
+        <!-- Filter products -->
+        <div id="filter_items">
+            <!-- Filter types -->
+            <h1 class="filter_header">Filter by:</h1>
+            <hr class="line_vr_page">
+            <h2 class="filter_checkbox_header">ACCESSORIES</h2>
+            <label class="container">VR Headset
+              <input type="checkbox" id="vr_headset_checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Zoom Lens
+              <input type="checkbox" id="zoom_lens_checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Portable Speaker
+              <input type="checkbox" id="portable_speaker_checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Smartphone Cases
+              <input type="checkbox" id="smartphone_cases_checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Headphones
+              <input type="checkbox" id="headphones_checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <hr class="line_vr_page">
+            <h2 class="filter_checkbox_header">BRANDS</h2>
+            <label class="container">iPhone
+              <input type="checkbox" id="iphone_checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Samsung Galaxy
+              <input type="checkbox" id="samsung_galaxy_checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Google Pixel
+              <input type="checkbox" id="google_pixel_checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">HTC
+              <input type="checkbox" id="htc_checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Sony Xperia
+              <input type="checkbox" id="sony_xperia_checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">OnePlus
+              <input type="checkbox" id="oneplus_checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <hr class="line_vr_page">
+            <h2 class="filter_checkbox_header">COLORS</h2>
+            <label class="container">Black
+              <input type="checkbox" id="black_checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Blue
+              <input type="checkbox" id="blue_checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Red
+              <input type="checkbox" id="blue_checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">White
+              <input type="checkbox" id="white_checkbox">
+              <span class="checkmark"></span>
+            </label>
+        </div>
+            
+        <!-- Align content to the right -->
+        <div id="categories_right">   
+            
+            <!-- Header of the page -->
+            <h1 class="categories_header">- Categories -</h1>
+            
+            <!-- Displays the amount of items visible on this page -->
+            <span class="item_pages">Showing all products</span>
+            
+            <span class="sort_by_dropbox">Sort by:</span>
+            <!-- Dropdown box for sorting -->
+            <select class="order_sorting selectBox" name="order_sorting">
+                <option value="rel">Relevance</option>   
+                <option value="l2h">Price: Low - High</option>  
+                <option value="h2l">Price: High - Low</option>
+                <option value="abc">Alphabetical Order</option>
+            </select>
+            
+            <!-- Displays the items, and the user can add the items into their basket -->
+            <div id="product_grid"></div>
+        </div>
+
+        <!-- Recommendation header -->
+        <h2 class="recommend_header">Recommendation</h2>
+        <!-- Horizontal line displayed below the header -->
+        <hr class="reco_hor_line">
+        <!-- Recommendation search will be displayed here -->
+        <div id="display_recomendation"></div>
+        <!-- Image of the recommended products will be displayed here -->
+        <div id="display_recommend_img"></div>
+        
+        <button onclick="backToTop()" id="back_to_top" title="Back to top">Back to top</button>
+        
+        <div id="supertech_footer">      
+            <span class="contact_footer">Contact Information</span>
+            <span class="contact_tour">Tour</span> 
+            <span class="contact_help">Help</span>      
+            <span class="contact_chat">Chat</span>      
+            <span class="contact_contact">Contact</span>      
+            <span class="contact_feedback">Feedback</span>       
+            <span class="contact_mobile">Mobile</span>      
+            <span class="company_footer">Company</span>       
+            <span class="company_super_tech">Super Tech</span>
+            <span class="company_super_tech_business">Super Tech Business</span>   
+            <span class="company_jobs">Job</span>       
+            <span class="company_about">About</span>      
+            <span class="company_privacy_policy">Privacy Policy</span>      
+            <span class="company_legal">Legal</span>     
+            <span class="network_footer">Super Tech Network</span>
+            <span class="network_technology">Technology</span>
+            <span class="network_phone">Phone</span>      
+            <span class="network_service">Service</span>     
+            <span class="network_sim">SIM</span>       
+            <span class="network_communication">Communication</span>
+            <span class="social_media_blog">Blog</span>       
+            <span class="hifun">-</span>     
+            <span class="social_media_facebook">Facebook</span>
+            <span class="hifun_two">-</span>      
+            <span class="social_media_twitter">Twitter</span>       
+            <span class="hifun_three">-</span>      
+            <span class="social_media_linkedin">LinkedIn</span>
+            <span class="information_footer">site design / logo © 2018 SuperTech Inc; <br> user contributions licensed under cc by-sa 3.0 <br> with attribution required. rev 2018.1.23.28521</span>    
+        </div>
+    </body>
+</html>

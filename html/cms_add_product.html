@@ -1,0 +1,67 @@
+<!DOCTYPE>
+<html lang="en">    
+    <head>       
+        <title>CMS | Add Product</title>                     
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/x-icon" href="../img/icon/tab_logo.ico"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">        
+        <script type="text/javascript" src="../js/main.js"></script>
+    </head>
+    
+    <body>  
+        <ul id="cms_navigation">
+            <li class="cms_page"><a href="cms_index.html">Home</a></li>
+            <li class="cms_page"><a class="active" href="cms_add_product.html">Add Product</a></li>
+            <li class="cms_page"><a href="cms_list_product.html">List Product</a></li>
+            <li class="cms_page"><a href="cms_edit_product.html">Edit Product</a></li>
+            <li class="cms_page"><a href="cms_delete_product.html">Delete Product</a></li>
+            <li class="cms_page"><a href="cms_view_order.html">View Customer Order</a></li>
+        </ul>
+        
+        <!-- Edit the products on the categories page -->
+        <div id="content_page">
+            <!-- Add product section -->
+            <div id="input_area">
+                <h1 class="input_title">Add Product</h1>
+                <label class="product_label">Image:<br>
+                    <!-- User enters url of the image -->
+                    <input id="image" name="image" placeholder="URL..." type="text">
+                </label>
+                <br>
+                <br>
+                <label class="product_label">Name:<br>
+                    <!-- User enters the name of the product -->
+                    <input id="name" name="name" placeholder="Name..." type="text">
+                </label>
+                <br>
+                <br>
+                <label class="product_label">Accessories:<br>
+                    <!-- Enter the product accessories -->
+                    <input id="accessories" name="accessories" placeholder="Accessories..." type="text">
+                </label>
+                <br>
+                <br>
+                <label class="product_label">Brand:<br>
+                    <!-- Enter product brand -->
+                    <input id="brand" name="brand" placeholder="Brand..." type="text">
+                </label>
+                <br>
+                <br>
+                <label class="product_label">Price:<br>
+                    <!-- Enter the price of the product -->
+                    <input id="price" name="price" placeholder="Price..." type="text">
+                </label>
+                <br>
+                <br>
+                <label class="product_label">Color:<br>
+                    <!-- Enter the colour of the product -->
+                    <input id="color" name="color" placeholder="Color..." type="text">
+                </label>
+                <input class="save_button" onclick="addProduct()" type="submit" value="SAVE">
+                <!-- Success message will be displayed here -->
+                <p id="add_product"></p>
+            </div>
+        </div>
+    </body>
+</html>

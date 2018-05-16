@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html lang="en">    
+    <head>       
+        <title>CMS | View Customer Orders</title>               
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/x-icon" href="../img/icon/tab_logo.ico"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">        
+        <script type="text/javascript" src="../js/main.js"></script>
+    </head>
+    
+    <!-- View customer orders when page loads -->
+    <body onload="displayPastOrder()">          
+        <ul id="cms_navigation">
+            <li class="cms_page"><a href="cms_index.html">Home</a></li>
+            <li class="cms_page"><a href="cms_add_product.html">Add Product</a></li>
+            <li class="cms_page"><a href="cms_list_product.html">List Product</a></li>
+            <li class="cms_page"><a href="cms_edit_product.html">Edit Product</a></li>
+            <li class="cms_page"><a href="cms_delete_product.html">Delete Product</a></li>
+            <li class="cms_page"><a class="active" href="cms_view_order.html">View Customer Order</a></li>
+        </ul>
+        
+        <!-- view orders section -->
+        <div id="content_page">
+            <!-- Header -->
+            <h1 class="cms_title">View Customer Orders</h1>        
+            <!-- A table that shows the orders the customers have made -->        
+            <div id="display_table"></div>
+        </div>
+    </body>
+</html>

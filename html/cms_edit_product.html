@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html lang="en">    
+    <head>       
+        <title>CMS | Edit Product</title>                     
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/x-icon" href="../img/icon/tab_logo.ico"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">        
+        <script type="text/javascript" src="../js/main.js"></script> 
+    </head>
+    
+    <body>       
+        <ul id="cms_navigation">
+            <li class="cms_page"><a href="cms_index.html">Home</a></li>
+            <li class="cms_page"><a href="cms_add_product.html">Add Product</a></li>
+            <li class="cms_page"><a href="cms_list_product.html">List Product</a></li>
+            <li class="cms_page"><a class="active" href="cms_edit_product.html">Edit Product</a></li>
+            <li class="cms_page"><a href="cms_delete_product.html">Delete Product</a></li>
+            <li class="cms_page"><a href="cms_view_order.html">View Customer Order</a></li>
+        </ul>
+        
+        <!-- Add the products to the categories page -->
+        <div id="add_data_page">
+            <div id="input_area">
+                <h1 class="input_title">Edit Product</h1> 
+                <!-- Staff enters the product name they wish to edit/update -->
+                <label class="product_label">Enter product name:<span class='error'> *</span>
+                    <br>
+                    <input id="name" name="name" placeholder="Name..." type="text">
+                    <br>
+                    <input class="save_button" onclick="loadProduct()" name="search" type="submit" value="SEARCH">
+                </label>
+            </div>
+        </div>
+    </body>
+</html>
